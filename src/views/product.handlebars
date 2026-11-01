@@ -1,0 +1,18 @@
+<article class="product-detail">
+<h2>{{product.name}}</h2>
+
+<p>Артикул :{{product.id}}</p>
+<p>Цена :{{product.price}} руб.</p>
+<p>Категория :{{product.category}}</p>
+<p>{{product.description}}</p>
+
+    {{#if product.isAvailable}}
+    <p>Товар есть в наличии</p>
+{{else}}
+    <p>Товар пока отсутствует.</p>
+    {{/if}}
+
+<a href="/products">Вернуться в каталог</a>
+
+
+</article>

@@ -1,0 +1,35 @@
+
+{{#each products}}
+    <h3>{{name}}</h3>
+
+    <p>Цена: {{price}} руб.</p>
+
+    <p>Категория:{{category}}</p>
+    
+    <p>{{description}}</p>
+
+    <a href="/products/{{id}}">
+    Подробнее
+    </a>
+{{/each}}
+//недописано
+
+<h2>Каталог товаров</h2>
+<div>
+{{#each products}}
+    <article>
+        <h3>{{name}}</h3>
+        <p>{{price}} руб.</p>
+         <p>{{category}} руб.</p>
+          <p>{{description}} руб.</p>
+           <a href="/products/{{id}}">Подробнее</a>
+    </article>
+    
+    {{#if isAvailable}}
+    <p>Товар есть в наличии</p>
+{{else}}
+    <p>Товары пока отсутствуют.</p>
+    {{/if}}
+
+{{/each}}
+</div>
